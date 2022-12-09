@@ -27,7 +27,7 @@
         <div class="col-md-4">
             <div class="card shadow-sm">
                 <div class="card-header">
-                    Informasi Karyawan
+                    Informasi Anggota
                 </div>
                 <div class="card-body">
                     <ul class="ps-3">
