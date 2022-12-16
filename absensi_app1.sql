@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2022 at 06:56 PM
+-- Generation Time: Dec 09, 2022 at 01:53 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -61,6 +61,14 @@ CREATE TABLE `attendance_position` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `attendance_position`
+--
+
+INSERT INTO `attendance_position` (`id`, `attendance_id`, `position_id`, `created_at`, `updated_at`) VALUES
+(2, 1, 2, NULL, NULL),
+(3, 1, 3, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -109,22 +117,6 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2022_06_16_075041_create_roles_table', 1),
-(6, '2022_06_16_075123_add_role_id_to_users_table', 1),
-(7, '2022_06_17_134607_create_positions_table', 1),
-(8, '2022_06_17_142639_add_phone_and_position_id_to_users_table', 1),
-(9, '2022_06_20_114945_create_holidays_table', 1),
-(10, '2022_06_21_135647_create_attendances_table', 1),
-(11, '2022_06_21_135721_create_attendance_position_table', 1),
-(12, '2022_06_21_144144_create_presences_table', 1),
-(13, '2022_06_26_214220_create_permissions_table', 1),
-(14, '2022_06_26_214239_add_is_permission_to_presences_table', 1),
-(15, '2022_06_26_215859_add_permission_date_to_permissions_table', 1),
-(16, '2022_06_27_162656_add_is_accepted_to_permissions_table', 1),
 (17, '2014_10_12_000000_create_users_table', 1),
 (18, '2014_10_12_100000_create_password_resets_table', 1),
 (19, '2019_08_19_000000_create_failed_jobs_table', 1),
@@ -208,8 +200,9 @@ CREATE TABLE `positions` (
 --
 
 INSERT INTO `positions` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(2, 'Teacher', '2022-12-09 12:19:22', '2022-12-16 16:53:42'),
-(3, 'Student', '2022-12-09 12:19:22', '2022-12-16 16:15:44'),
+(1, 'Pegawai \"Biasa\"', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(2, 'Manager', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(3, 'Direktur', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
 (4, 'Operator', '2022-12-09 12:19:22', '2022-12-09 12:19:22');
 
 -- --------------------------------------------------------
@@ -277,9 +270,18 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `phone`, `position_id`, `role_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Lucky Saputra', 'admin@gmail.com', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '937-214-5291', 4, 1, 'u77YHBeUyVoFmj3DnHGKzxfn4prAVDzM1BG327GtChsRntKTUtS9cadiWcXG', '2022-12-09 12:19:22', '2022-12-16 16:16:29'),
-(2, 'Alice ', 'crist@example.org', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+15618134205', 4, 2, 'HwAuR52erbZfnHaosTzA0ZndyFVKYjnZw8NC4K2YSvnhNgxMohub7KTqd0BB', '2022-12-09 12:19:22', '2022-12-16 16:16:29'),
-(13, 'Luck', 'damnlux17@gmail.com', NULL, '$2y$10$a3BLDX2AuUGb1idzHy..d.zhEipVzFHKSZzQlG1b7TT.Y8MboZLbG', '0888182883', 3, 3, NULL, '2022-12-16 16:21:12', '2022-12-16 16:44:42');
+(1, 'Muhammad Pauzi (Admin)', 'admin@gmail.com', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '937-214-5291', 4, 1, 'bGCnnexhsfxxOBv0E6Pgq9w9wJCe8qTDkXuNAoOXiBxPfv9e5d0IpyXaeA0X', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(2, 'Alice Lebsack', 'crist.beau@example.org', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+15618134205', 4, 2, 'HwAuR52erbZfnHaosTzA0ZndyFVKYjnZw8NC4K2YSvnhNgxMohub7KTqd0BB', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(3, 'Mrs. Henriette Halvorson', 'mstark@example.com', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '307-826-9672', 3, 3, 'qy3wl8FdW1QBK5BmwFprxZh7UKDiXsjM192AJqWQfAqQix1GdRIjwtQPcci1', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(4, 'Waldo Watsica', 'guiseppe17@example.org', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '952-345-6247', 3, 3, '1g8uJ7P3dv', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(5, 'Anabel Krajcik MD', 'mills.jodie@example.com', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+1.864.508.7586', 3, 3, 'eKGWP4Huyd', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(6, 'Davion Bartoletti', 'mbergstrom@example.net', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '(601) 587-2418', 3, 3, '9bHbdhiRJL', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(7, 'Ms. Fae Steuber', 'deion52@example.com', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+1 (810) 946-0407', 3, 3, 'nklMIajH1M', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(8, 'Mae Leffler', 'alexandra.thompson@example.org', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+1-754-406-5808', 3, 3, 'VVxkUlsT2A', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(9, 'Fidel Hessel I', 'stroman.ana@example.net', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1-563-888-7692', 3, 3, '4fZRuiEvRM', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(10, 'Sally Corkery', 'lesch.audra@example.org', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1-820-731-8908', 3, 3, '5QJNsqSvtd', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(11, 'Casey Monahan', 'nhilpert@example.org', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '417.328.3072', 3, 3, 'KPAA8DqgiM', '2022-12-09 12:19:22', '2022-12-09 12:19:22'),
+(12, 'Green Bogan', 'maeve22@example.net', '2022-12-09 12:19:22', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+1 (463) 418-6926', 3, 3, 'LOeSQHeHWFR9reOLCQxiPtHC2uNs9Xw6u54FKHSh68NKX8DJn6TWG9HPOvKo', '2022-12-09 12:19:22', '2022-12-09 12:19:22');
 
 --
 -- Indexes for dumped tables
@@ -378,13 +380,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `attendances`
 --
 ALTER TABLE `attendances`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `attendance_position`
 --
 ALTER TABLE `attendance_position`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -420,13 +422,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `positions`
 --
 ALTER TABLE `positions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `presences`
 --
 ALTER TABLE `presences`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -438,7 +440,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
