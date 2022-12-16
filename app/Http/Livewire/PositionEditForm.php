@@ -32,8 +32,8 @@ class PositionEditForm extends Component
         }
 
         $message = $affected === 0 ?
-            "Tidak ada data jabatan yang diubah." :
-            "Ada $affected data jabatan yang berhasil diedit.";
+            "Tidak ada data role yang diubah." :
+            "Ada $affected data role yang berhasil diedit.";
 
         return redirect()->route('positions.index')->with('success', $message);
     }

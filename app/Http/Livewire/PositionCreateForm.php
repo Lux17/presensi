@@ -34,7 +34,7 @@ class PositionCreateForm extends Component
         // karena nanti akan difilter apakah input kedua dan input selanjutnya apakah berisi
         $this->validate([
             'positions.0.name' => 'required'
-        ], ['positions.0.name.required' => 'Setidaknya input jabatan pertama wajib diisi.']);
+        ], ['positions.0.name.required' => 'Setidaknya input role pertama wajib diisi.']);
 
         // ambil input/request dari position yang berisi
         $positions = array_filter($this->positions, function ($a) {
@@ -46,7 +46,7 @@ class PositionCreateForm extends Component
             Position::create($position);
         }
 
-        redirect()->route('positions.index')->with('success', 'Data jabatan berhasil ditambahkan.');
+        redirect()->route('positions.index')->with('success', 'Data role berhasil ditambahkan.');
     }
 
     public function render()

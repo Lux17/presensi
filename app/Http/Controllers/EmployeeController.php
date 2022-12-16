@@ -10,14 +10,14 @@ class EmployeeController extends Controller
     public function index()
     {
         return view('employees.index', [
-            "title" => "Karyawaan"
+            "title" => "Anggota"
         ]);
     }
 
     public function create()
     {
         return view('employees.create', [
-            "title" => "Tambah Data Karyawaan"
+            "title" => "Tambah Data Anggota"
         ]);
     }
 
@@ -28,13 +28,13 @@ class EmployeeController extends Controller
             return redirect()->back();
         $ids = explode('-', $ids);
 
-        // ambil data user yang hanya memiliki User::USER_ROLE_ID / role untuk karyawaan
+        // ambil data user yang hanya memiliki User::USER_ROLE_ID / role untuk Anggota
         $employees = User::query()
             ->whereIn('id', $ids)
             ->get();
 
         return view('employees.edit', [
-            "title" => "Edit Data Karyawaan",
+            "title" => "Edit Data Anggota",
             "employees" => $employees
         ]);
     }

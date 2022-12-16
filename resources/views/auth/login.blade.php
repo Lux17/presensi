@@ -7,10 +7,20 @@
 @section('content')
 
 <div class="w-100">
-
+<div style="display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    margin-left: 5px;
+    margin-right: 10px;
+    padding: 20px;">
+  <div class="card shadow-sm" style="width: 27rem;" >
+  <div class="card-body">
     <main class="form-signin w-100 m-auto">
         <form method="POST" action="{{ route('auth.login') }}" id="login-form">
-            <h1 class="h3 mb-3 fw-normal">Silahkan masuk untuk absensi</h1>
+            <h1 class="h3 mb-3 fw-normal">Login</h1>
 
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInputEmail" name="email"
@@ -31,10 +41,11 @@
             </div>
 
             <button class="w-100 btn btn-primary" type="submit" id="login-form-button">Masuk</button>
-            <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+            <p class="mt-5 mb-3 text-muted">&copy; Sanjore 2022</p>
         </form>
     </main>
-
+</div>
+</div>
 </div>
 @endsection
 
