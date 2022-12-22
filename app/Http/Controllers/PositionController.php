@@ -31,7 +31,7 @@ class PositionController extends Controller
         $positions = Position::query()->whereIn('id', $ids)->get();
 
         return view('positions.edit', [
-            "title" => "Edit Data JRole / Posisi",
+            "title" => "Edit Data Role / Posisi",
             "positions" => $positions
         ]);
     }
