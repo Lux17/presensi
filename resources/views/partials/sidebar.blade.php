@@ -13,14 +13,14 @@
                 <a class="nav-link {{ request()->routeIs('positions.*') ? 'active' : '' }}"
                     href="{{ route('positions.index') }}">
                     <span data-feather="tag" class="align-text-bottom"></span>
-                    Role / Posisi
+                    Rombel
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->routeIs('employees.*') ? 'active' : '' }}"
                     href="{{ route('employees.index') }}">
                     <span data-feather="users" class="align-text-bottom"></span>
-                    Anggota
+                    Anggota / User
                 </a>
             </li>
             <!-- <li class="nav-item">

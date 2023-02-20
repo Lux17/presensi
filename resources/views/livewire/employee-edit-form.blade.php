@@ -32,7 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <x-form-label id="position_id{{ $employee['id'] }}"
-                        label='Role / Posisi Anggota {{ $loop->iteration }}' />
+                        label='Rombel {{ $loop->iteration }}' />
                     <select class="form-select" aria-label="Default select example" name="position_id"
                         wire:model.defer="employees.{{ $loop->index }}.position_id">
                         <option selected disabled>-- Pilih Role --</option>

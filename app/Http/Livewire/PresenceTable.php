@@ -154,9 +154,10 @@ final class PresenceTable extends PowerGridComponent
             Column::make('Created at', 'created_at')
                 ->hidden(),
 
-            Column::make('Created at', 'created_at_formatted')
+            Column::make('Created at', 'created_at_formatted','presences.created_at')
                 ->makeInputDatePicker()
                 ->searchable()
+
         ];
     }
 

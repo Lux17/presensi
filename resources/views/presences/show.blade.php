@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="mb-2">
-                            <small class="fw-bold text-muted d-block">Jabatan / Posisi</small>
+                            <small class="fw-bold text-muted d-block">Rombel</small>
                             <div>
                                 @foreach ($attendance->positions as $position)
                                 <span class="badge text-bg-success d-inline-block me-1">{{ $position->name }}</span>

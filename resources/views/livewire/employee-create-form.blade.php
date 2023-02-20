@@ -29,7 +29,7 @@
                     <x-form-error key=" employees.{{ $i }}.password" />
                 </div>
                 <div class="mb-3">
-                    <x-form-label id="position_id{{ $i }}" label='Role / Posisi Anggota {{ $i + 1 }}' />
+                    <x-form-label id="position_id{{ $i }}" label='Rombel {{ $i + 1 }}' />
                     <select class="form-select" aria-label="Default select example" name="position_id"
                         wire:model.defer="employees.{{ $i }}.position_id">
                         <option selected disabled>-- Pilih Posisi --</option>
