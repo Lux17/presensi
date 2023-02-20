@@ -51,8 +51,9 @@ Route::middleware('auth')->group(function () {
         Route::post('/presences/{attendance}/present', [PresenceController::class, 'presentUser'])->name('presences.present');
         Route::post('/presences/{attendance}/acceptPermission', [PresenceController::class, 'acceptPermission'])->name('presences.acceptPermission');
         // employees permissions
-
         Route::get('/presences/{attendance}/permissions', [PresenceController::class, 'permissions'])->name('presences.permissions');
+        //Location User
+        Route::get('/presences/location', 'LocationController@userLocation');
     });
 
     Route::middleware('role:user')->name('home.')->group(function () {
@@ -63,6 +64,7 @@ Route::middleware('auth')->group(function () {
 
         Route::get('/absensi/{attendance}', [HomeController::class, 'show'])->name('show');
         Route::get('/absensi/{attendance}/permission', [HomeController::class, 'permission'])->name('permission');
+        // Route::post('/absensi/location', 'LocationController@userLocation');
     });
 
     Route::delete('/logout', [AuthController::class, 'logout'])->name('auth.logout');

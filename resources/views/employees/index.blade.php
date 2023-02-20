@@ -5,11 +5,34 @@
 @endpush
 
 @section('buttons')
+
+<style>
+    .button {
+    border: 2px solid #24b4fb;
+    background-color: #24b4fb;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 13px;
+    }
+
+    .button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    }
+
+    .button:hover {
+    background-color: #ffffff;
+    }
+</style>
 <div class="btn-toolbar mb-2 mb-md-0">
-    <div>
-        <a href="{{ route('employees.create') }}" class="btn btn-sm btn-primary">
+    <div class="button">
+        <a href="{{ route('employees.create') }}" >
             <span data-feather="plus-circle" class="align-text-bottom me-1"></span>
-            Tambah Data
+            Tambah Anggota
         </a>
     </div>
 </div>

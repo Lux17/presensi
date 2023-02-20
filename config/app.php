@@ -195,7 +195,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+        Stevebauman\Location\LocationServiceProvider::class
     ],
 
     /*
@@ -212,5 +213,12 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
+
+
+
+    'aliases' => [
+        
+        'Location' => 'Stevebauman\Location\Facades\Location',
+    ],
 
 ];
