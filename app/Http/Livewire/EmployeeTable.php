@@ -187,37 +187,37 @@ final class EmployeeTable extends PowerGridComponent
                 ->searchable()
                 ->sortable(),
 
-            Column::make('Name', 'name', 'users.name')
+            Column::make('Nama', 'name', 'users.name')
                 ->searchable()
-                ->makeInputText()
+                // ->makeInputText()
                 ->editOnClick()
                 ->sortable(),
 
             Column::make('Email', 'email', 'users.email')
                 ->searchable()
-                ->makeInputText()
+                // ->makeInputText()
                 ->sortable(),
 
             Column::make('No. Telp', 'phone', 'users.phone')
                 ->searchable()
-                ->makeInputText()
+                // ->makeInputText()
                 ->sortable(),
 
             Column::make('Jabatan', 'position', 'positions.name')
                 ->searchable()
-                ->makeInputMultiSelect(Position::all(), 'name', 'position_id')
+                // ->makeInputMultiSelect(Position::all(), 'name', 'position_id')
                 ->sortable(),
 
             Column::make('Role', 'role', 'roles.name')
                 ->searchable()
-                ->makeInputMultiSelect(Role::all(), 'name', 'role_id')
+                // ->makeInputMultiSelect(Role::all(), 'name', 'role_id')
                 ->sortable(),
 
             Column::make('Created at', 'created_at', 'users.created_at')
                 ->hidden(),
 
-            Column::make('Created at', 'created_at_formatted', 'users.created_at')
-                ->makeInputDatePicker()
+            Column::make('Tanggal', 'created_at_formatted', 'users.created_at')
+                // ->makeInputDatePicker()
                 ->searchable()
         ];
     }

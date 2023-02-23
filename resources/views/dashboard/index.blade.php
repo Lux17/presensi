@@ -67,7 +67,7 @@ button:hover {
 
             <div class="card shadow border-left-primary">
                 <div class="card-body">
-                    <h6 class="fs-6 fw-black">Data Role</h6>
+                    <h6 class="fs-6 fw-black">Data Rombel</h6>
                     <h4 class="fw-bold">{{ $positionCount }}</h4>
                 </div>
             </div>

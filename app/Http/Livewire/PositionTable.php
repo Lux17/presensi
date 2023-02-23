@@ -166,16 +166,16 @@ final class PositionTable extends PowerGridComponent
                 ->searchable()
                 ->sortable(),
 
-            Column::make('Name', 'name')
+            Column::make('Nama', 'name')
                 ->searchable()
-                ->makeInputText('name')
+                // ->makeInputText('name')
                 ->sortable(),
 
             Column::make('Created at', 'created_at')
                 ->hidden(),
 
-            Column::make('Created at', 'created_at_formatted', 'created_at')
-                ->makeInputDatePicker()
+            Column::make('Tanggal', 'created_at_formatted', 'created_at')
+                // ->makeInputDatePicker()
                 ->searchable()
         ];
     }

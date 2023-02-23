@@ -125,7 +125,7 @@ final class PresenceTable extends PowerGridComponent
 
             Column::make('Nama', 'user_name')
                 ->searchable()
-                ->makeInputText('users.name')
+                // ->makeInputText('users.name')
                 ->sortable(),
 
             Column::make('Tanggal Hadir', 'presence_date')
@@ -136,13 +136,13 @@ final class PresenceTable extends PowerGridComponent
             Column::make('Jam Absen Masuk', 'presence_enter_time')
                 ->searchable()
                 // ->makeInputRange('presence_enter_time') // terlalu banyak menggunakan bandwidth (ukuran data yang dikirim terlalu besar)
-                ->makeInputText('presence_enter_time')
+                // ->makeInputText('presence_enter_time')
                 ->sortable(),
 
             Column::make('Jam Absen Pulang', 'presence_out_time')
                 ->searchable()
                 // ->makeInputRange('presence_out_time') // ini juga
-                ->makeInputText('presence_out_time')
+                // ->makeInputText('presence_out_time')
                 ->sortable(),
 
             Column::make('Lokasi', 'is_Location')
@@ -154,8 +154,8 @@ final class PresenceTable extends PowerGridComponent
             Column::make('Created at', 'created_at')
                 ->hidden(),
 
-            Column::make('Created at', 'created_at_formatted','presences.created_at')
-                ->makeInputDatePicker()
+            Column::make('Tanggal Dibuat', 'created_at_formatted','presences.created_at')
+                // ->makeInputDatePicker()
                 ->searchable()
 
         ];

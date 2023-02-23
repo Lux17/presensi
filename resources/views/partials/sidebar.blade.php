@@ -1,26 +1,33 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse">
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-black sidebar collapse">
     <div class="position-sticky pt-3">
+        <style>
+            .nav-item.active {
+            background-color: rgb(83, 121, 247);
+        }
+        </style>
         <ul class="nav flex-column">
             @if (auth()->user()->isAdmin() or auth()->user()->isOperator())
-            <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('dashboard.*') ? 'active' : '' }}" aria-current="page"
+            <li class="nav-item {{ request()->routeIs('dashboard.*') ? 'active' : '' }}">
+                <a class="nav-link " aria-current="page"
                     href="{{ route('dashboard.index') }}">
-                    <span data-feather="home" class="align-text-bottom"></span>
-                    Dashboard
+                    <span data-feather="home" class="align-text-bottom text-white"></span>
+                    <span class="text-white">Dashboard </span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('positions.*') ? 'active' : '' }}"
+            <li class="nav-item {{ request()->routeIs('positions.*') ? 'active' : '' }}">
+                <a class="nav-link "
                     href="{{ route('positions.index') }}">
-                    <span data-feather="tag" class="align-text-bottom"></span>
-                    Rombel
+                    <span data-feather="tag" class="align-text-bottom text-white"></span>
+                    <span class="text-white">Rombel</span>
+                    
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('employees.*') ? 'active' : '' }}"
+            <li class="nav-item  {{ request()->routeIs('employees.*') ? 'active' : '' }}">
+                <a class="nav-link"
                     href="{{ route('employees.index') }}">
-                    <span data-feather="users" class="align-text-bottom"></span>
-                    Anggota / User
+                    <span data-feather="users" class="align-text-bottom text-white"></span>
+                    <span class="text-white">Anggota / User</span>
+                    
                 </a>
             </li>
             <!-- <li class="nav-item">
@@ -30,18 +37,20 @@
                     Hari Libur
                 </a>
             </li> -->
-            <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('attendances.*') ? 'active' : '' }}"
+            <li class="nav-item {{ request()->routeIs('attendances.*') ? 'active' : '' }}">
+                <a class="nav-link "
                     href="{{ route('attendances.index') }}">
-                    <span data-feather="clipboard" class="align-text-bottom"></span>
-                    Absensi
+                    <span data-feather="clipboard" class="align-text-bottom text-white"></span>
+                    <span class="text-white">Absensi</span>
+                    
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('presences.*') ? 'active' : '' }}"
+            <li class="nav-item {{ request()->routeIs('presences.*') ? 'active' : '' }}">
+                <a class="nav-link "
                     href="{{ route('presences.index') }}">
-                    <span data-feather="clipboard" class="align-text-bottom"></span>
-                    Data Kehadiran
+                    <span data-feather="clipboard" class="align-text-bottom text-white"></span>
+                    <span class="text-white">Data Kehadiran</span>
+                    
                 </a>
             </li>
             @endif

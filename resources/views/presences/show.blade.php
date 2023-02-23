@@ -5,8 +5,60 @@
 @endpush
 
 @section('content')
-<div class="card mb-3">
-    <div class="card-body">
+<style>
+    .card2 {
+
+margin: 0 auto;
+background-color: #F8FBFE;
+border-radius: 8px;
+z-index: 1;
+}
+
+.tools {
+display: flex;
+align-items: center;
+padding: 9px;
+}
+
+.circle {
+padding: 0 4px;
+}
+
+.box {
+display: inline-block;
+align-items: center;
+width: 10px;
+height: 10px;
+padding: 1px;
+border-radius: 50%;
+}
+
+.red {
+background-color: #ff605c;
+}
+
+.yellow {
+background-color: #ffbd44;
+}
+
+.green {
+background-color: #00ca4e;
+}
+
+</style>
+<div class="card2 mb-3">
+    <div class="tools">
+        <div class="circle">
+            <span class="red box"></span>
+        </div>
+        <div class="circle">
+            <span class="yellow box"></span>
+        </div>
+        <div class="circle">
+            <span class="green box"></span>
+        </div>
+    </div>
+    <div class="card-body card__content">
         <div class="row">
             <div class="col-md-6 mb-3 mb-md-0">
                 <h5 class="card-title">{{ $attendance->title }}</h5>
@@ -28,11 +80,11 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-2">
-                            <small class="fw-bold text-muted d-block">Range Jam Masuk</small>
+                            <small class="fw-bold text-muted d-block">Jam Masuk</small>
                             <span>{{ $attendance->start_time }} - {{ $attendance->batas_start_time }}</span>
                         </div>
                         <div class="mb-2">
-                            <small class="fw-bold text-muted d-block">Range Jam Pulang</small>
+                            <small class="fw-bold text-muted d-block">Jam Pulang</small>
                             <span>{{ $attendance->end_time }} - {{ $attendance->batas_end_time }}</span>
                         </div>
                     </div>
