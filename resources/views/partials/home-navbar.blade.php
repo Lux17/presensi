@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-dark navbar-dark py-3">
+<nav class="navbar navbar-expand-md bg-primary navbar-dark py-3">
     <div class="container">
         <a class="navbar-brand bg-transparent fw-bold" href="{{ route('home.index') }}">Sanjore</a>
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"

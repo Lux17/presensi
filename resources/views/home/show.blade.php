@@ -54,7 +54,7 @@
                                 @if($date == now()->toDateString())
                                 <div class="badge text-bg-info">Belum Hadir</div>
                                 @else
-                                <div class="badge text-bg-danger">Tidak Hadir</div>
+                                {{-- <div class="badge text-bg-danger">Tidak Hadir</div> --}}
                                 @endif
                             </td>
                             @else
