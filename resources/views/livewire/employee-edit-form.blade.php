@@ -19,16 +19,16 @@
                     <x-form-error key="employees.{{ $loop->index }}.email" />
                 </div>
                 <div class="mb-3">
+                    <x-form-label id="password{{ $employee['id'] }}" label='Password'
+                        required="false" />
+                    <x-form-input id="password{{ $employee['id'] }}" name="password{{ $employee['id'] }}" disabled
+                        required="false" />
+                </div>
+                <div class="mb-3">
                     <x-form-label id="phone{{ $employee['id'] }}" label='No. Telp {{ $loop->iteration }}' />
                     <x-form-input id="phone{{ $employee['id'] }}" name="phone{{ $employee['id'] }}"
                         wire:model.defer="employees.{{ $loop->index }}.phone" placeholder="Format: 08**" />
                     <x-form-error key="employees.{{ $loop->index }}.phone" />
-                </div>
-                <div class="mb-3">
-                    <x-form-label id="password{{ $employee['id'] }}" label='Password hanya bisa diubah oleh Anggota'
-                        required="false" />
-                    <x-form-input id="password{{ $employee['id'] }}" name="password{{ $employee['id'] }}" disabled
-                        required="false" />
                 </div>
                 <div class="mb-3">
                     <x-form-label id="position_id{{ $employee['id'] }}"

@@ -96,10 +96,16 @@
     margin-left: 5px;
     margin-right: 10px;
     padding: 20px;">
+
   <div class="card shadow-sm" style="width: 27rem;" >
   <div class="card2">
     <main class="form-signin w-100 m-auto">
+      <center>
+        <img src="{{ asset('assets/sanjore-icon.png') }}" class="mb-1" style="width:200px">
+      </center>
         <form method="POST" action="{{ route('auth.login') }}" id="login-form">
+
+
                 <h1 class="h3 mb-3 fw-normal">Login</h1>
             <p>Silahkan masuk ke akunmu.</p>
 

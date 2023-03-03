@@ -16,17 +16,17 @@
                     <x-form-error key="employees.{{ $i }}.email" />
                 </div>
                 <div class="mb-3">
-                    <x-form-label id="phone{{ $i }}" label='No. Telp {{ $i + 1 }}' />
-                    <x-form-input id="phone{{ $i }}" name="phone{{ $i }}" wire:model.defer="employees.{{ $i }}.phone"
-                        placeholder="Format: 08**" />
-                    <x-form-error key="employees.{{ $i }}.phone" />
-                </div>
-                <div class="mb-3">
                     <x-form-label id="password{{ $i }}"
-                        label='Password Anggota {{ $i + 1 }} (default: "123" jika tidak diisi)' required="false" />
+                        label='Password Anggota {{ $i + 1 }} (default: "123" )' required="false" />
                     <x-form-input id="password{{ $i }}" name="password{{ $i }}"
                         wire:model.defer="employees.{{ $i }}.password" required="false" />
                     <x-form-error key=" employees.{{ $i }}.password" />
+                </div>
+                <div class="mb-3">
+                    <x-form-label id="phone{{ $i }}" label='No. Telp {{ $i + 1 }}' />
+                    <x-form-input id="phone{{ $i }}" name="phone{{ $i }}" wire:model.defer="employees.{{ $i }}.phone"
+                        placeholder="Format: 08*********" />
+                    <x-form-error key="employees.{{ $i }}.phone" />
                 </div>
                 <div class="mb-3">
                     <x-form-label id="position_id{{ $i }}" label='Rombel {{ $i + 1 }}' />

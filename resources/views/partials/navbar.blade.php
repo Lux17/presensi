@@ -1,6 +1,6 @@
 <header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 py-3 px-3 fs-6" href="">SANJORE</a>
-    <button class="navbar-toggler position-absolute d-md-none collapsed border-0" type="button"
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 py-3 px-3 fs-6 bg-light" href=""><img src="{{ asset('assets/sanjore-icon.png') }}" style="width:96px"></a>
+    <button class="navbar-toggler bg-primary  position-absolute d-md-none collapsed border-0" type="button"
         data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
