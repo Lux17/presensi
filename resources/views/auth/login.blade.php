@@ -128,7 +128,7 @@
             </div>
 
             <button class="w-100 btn btn-donate" type="submit" id="login-form-button">Masuk</button>
-            <p class="mt-5 mb-3 text-muted">&copy; Sanjore 2022</p>
+            <p class="mt-5 mb-3 text-muted">&copy; Sanjore 2023</p>
         </form>
     </main>
 </div>

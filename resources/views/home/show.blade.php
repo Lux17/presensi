@@ -31,7 +31,7 @@
             <h5 class="mb-3">Histori 30 Hari Terakhir</h5>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped">
-                    <thead>
+                    <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Tanggal</th>
